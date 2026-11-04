@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b1a">
+  <title>Neon Nights — Retro Pinball</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="cabinet">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">✦</span><div><p class="eyebrow">ARCADE / 1986</p><h1>NEON <em>NIGHTS</em></h1></div></div>
+      <button id="sound-toggle" class="sound-toggle" type="button" aria-pressed="false" title="Toggle sound">♪ SOUND ON</button>
+    </header>
+
+    <section class="game-shell" aria-label="Neon Nights pinball game">
+      <div class="scoreboard" aria-live="polite">
+        <div><span class="label">SCORE</span><strong id="score">000000</strong></div>
+        <div><span class="label">BEST</span><strong id="best">000000</strong></div>
+        <div><span class="label">BALL</span><strong id="balls">3</strong></div>
+      </div>
+      <div class="table-wrap" id="table-wrap">
+        <canvas id="game" width="600" height="900" aria-label="Pinball table. Use A and D or the left and right arrow keys to control the flippers. Drag the plunger down and release to launch."></canvas>
+        <div class="scanlines" aria-hidden="true"></div>
+        <div class="toast" id="toast" role="status">DRAG THE PLUNGER TO LAUNCH</div>
+      </div>
+      <footer class="controls">
+        <span><kbd>A</kbd> / <kbd>←</kbd> LEFT FLIPPER</span>
+        <span><kbd>D</kbd> / <kbd>→</kbd> RIGHT FLIPPER</span>
+        <span class="plunger-help">DRAG PLUNGER ↓ &amp; RELEASE</span>
+      </footer>
+    </section>
+    <p class="credit">ONE PLAYER&nbsp; · &nbsp;THREE BALLS&nbsp; · &nbsp;ENDLESS NEON</p>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
